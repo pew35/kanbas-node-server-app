@@ -31,7 +31,7 @@ export function updateCourse(courseId, courseUpdates) {
     return model.updateOne({ _id: courseId }, { $set: courseUpdates });
 }
 export function findAllCourses() {
-    return model.find();
+    return  model.find();
 }
 
 

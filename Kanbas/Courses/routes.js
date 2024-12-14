@@ -7,7 +7,7 @@ export default function CourseRoutes(app) {
 
     app.get("/api/courses", async (req, res) => {
         try {
-            const courses =  dao.findAllCourses();
+            const courses = await dao.findAllCourses();
             res.send(courses);
         } catch (error) {
             res.status(500).send({ error: "Failed to fetch courses" });
